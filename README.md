@@ -1,8 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sky Stats
+
+Sky Stats is a weather application built with [Next.js](https://nextjs.org) that provides detailed weather information, air quality data, and customization options. It is designed to deliver an intuitive and visually appealing user experience.
+
+## Features
+
+### 1. Air Quality Index (AQI) Integration
+
+- Displays air quality data using OpenWeatherMap's Air Pollution API.
+- Shows AQI levels and pollutant information on the weather card's flip side.
+- Utilizes color coding to indicate air quality levels (e.g., good, moderate, poor).
+
+### 2. Extended Weather Details
+
+- Provides precipitation probability.
+- Includes UV index information.
+- Displays atmospheric pressure, dew point temperature, and visibility conditions.
+
+### 3. Historical Weather Data
+
+- Features a graph showing temperature trends over the past 24 hours.
+- Includes historical weather comparisons (e.g., "warmer than yesterday").
+- Displays monthly averages for the selected location.
+
+### 4. Customization Options
+
+- Allows users to choose their default temperature unit (Celsius/Fahrenheit).
+- Offers theme customization (light/dark mode).
+- Enables users to customize which weather metrics are displayed.
+- Supports reordering of forecast information.
 
 ## Getting Started
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
@@ -14,48 +43,22 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **`src/app`**: Contains the main application files, including layout and global styles.
+- **`src/components`**: Includes reusable components such as `WeatherCard`, `ForecastCard`, and `Settings`.
+- **`src/utils`**: Utility functions and hooks, such as `useWeatherApi` and `useKeyboardShortcuts`.
+- **`public`**: Static assets like icons and images.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js, visit the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-Air Quality Index (AQI) Integration:
-Add air quality data using OpenWeatherMap's Air Pollution API
-Display AQI levels and pollutant information on the weather card's flip side
-Use color coding to indicate air quality levels (good, moderate, poor, etc.)
-
-Extended Weather Details:
-Add precipitation probability
-Include UV index information
-Show atmospheric pressure
-Add dew point temperature
-Show visibility conditions
-
-Historical Weather Data:
-Add a graph showing temperature trends over the past 24 hours
-Include historical weather comparison (e.g., "warmer than yesterday")
-Show monthly averages for the location
-
-Customization Options:
-Allow users to choose default temperature unit
-Add theme customization (light/dark mode)
-Customize which weather metrics are displayed
-Allow reordering of forecast information
-
-- can u implement these 4 functionalities step by step accurately in a production ready code format that is optimized and has no comment lines
+The easiest way to deploy Sky Stats is to use the [Vercel Platform](https://vercel.com). Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
