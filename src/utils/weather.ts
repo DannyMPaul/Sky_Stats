@@ -1,68 +1,18 @@
 import axios from "axios";
+import {
+  WeatherData,
+  ForecastData,
+  SearchHistoryItem,
+} from "@/types/weather";
+import { SEARCH_CONFIG } from "./constants";
 
-export interface WeatherData {
-  name: string;
-  main: {
-    temp: number;
-    feels_like: number;
-    humidity: number;
-    pressure: number;
-  };
-  weather: [
-    {
-      main: string;
-      description: string;
-      icon: string;
-    }
-  ];
-  wind: {
-    speed: number;
-    deg: number;
-  };
-  sys: {
-    country: string;
-    sunrise: number;
-    sunset: number;
-  };
-  timezone: number;
-  visibility: number;
-}
+const { STORAGE_KEY } = SEARCH_CONFIG;
 
-export interface ForecastData {
-  list: Array<{
-    dt: number;
-    main: {
-      temp: number;
-      feels_like: number;
-      humidity: number;
-      pressure: number;
-    };
-    weather: [
-      {
-        main: string;
-        description: string;
-        icon: string;
-      }
-    ];
-    wind: {
-      speed: number;
-      deg: number;
-    };
-    pop: number;
-  }>;
-}
-
-export interface SearchHistoryItem {
-  city: string;
-  country: string;
-  timestamp: number;
-}
-
-export const MAX_SEARCH_HISTORY = 5;
+const MAX_SEARCH_HISTORY = 5;
 
 export const getSearchHistory = (): SearchHistoryItem[] => {
   if (typeof window === 'undefined') return [];
-  const history = localStorage.getItem('weatherSearchHistory');
+  const history = localStorage.getItem(STORAGE_KEY);
   return history ? JSON.parse(history) : [];
 };
 
@@ -87,7 +37,7 @@ export const addToSearchHistory = (city: string, country: string) => {
     history.pop();
   }
   
-  localStorage.setItem('weatherSearchHistory', JSON.stringify(history));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
 };
 
 export const getCoordinates = async (city: string) => {

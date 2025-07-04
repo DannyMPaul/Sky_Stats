@@ -1,0 +1,26 @@
+{
+  "name": "Sky Stats - Advanced Weather Application",
+  "short_name": "Sky Stats",
+  "description": "Get detailed weather forecasts, air quality index, and historical weather data",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/next.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/vercel.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["weather", "productivity", "utilities"],
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr"
+}

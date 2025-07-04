@@ -1,4 +1,4 @@
-import { WeatherAlert } from "@/utils/weather";
+import { WeatherAlert } from "@/types/weather";
 import { IoWarning } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,7 +8,7 @@ type WeatherAlertsProps = {
 };
 
 const getSeverityColor = (severity: WeatherAlert["severity"]) => {
-  const colors = {
+  const colors: Record<WeatherAlert["severity"], string> = {
     Minor: "bg-yellow-500",
     Moderate: "bg-orange-500",
     Severe: "bg-red-500",

@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import {
-  WeatherData,
   getWindDirection,
   getLocalTime,
   formatTime,
   isDaytime,
 } from "@/utils/weather";
+import { WeatherData } from "@/types/weather";
 import {
   WiThermometer,
   WiHumidity,
@@ -30,7 +31,7 @@ const WeatherInfo = ({
   value,
   label,
 }: {
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   value: string;
   label?: string;
 }) => (
@@ -105,9 +106,11 @@ export const WeatherCard = ({
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`}
+                <Image
+                  src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`}
                   alt={weatherData.weather[0].description}
+                  width={128}
+                  height={128}
                   className="w-32 h-32"
                 />
                 <div className="text-4xl font-bold mb-4 flex items-center gap-2">

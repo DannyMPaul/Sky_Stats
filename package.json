@@ -1,12 +1,25 @@
 {
-  "name": "weather-app",
-  "version": "0.1.0",
+  "name": "sky-stats",
+  "version": "1.0.0",
   "private": true,
+  "description": "Advanced weather application with forecasts, air quality, and customization options",
+  "author": "Sky Stats Team",
+  "license": "MIT",
+  "keywords": ["weather", "forecast", "react", "nextjs", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sky-stats.git"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true npm run build",
+    "export": "next build && next export",
+    "clean": "rm -rf .next out node_modules/.cache"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",

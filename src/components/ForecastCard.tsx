@@ -1,4 +1,5 @@
-import { ForecastData } from "@/utils/weather";
+import { ForecastData } from "@/types/weather";
+import Image from "next/image";
 import {
   WiHumidity,
   WiStrongWind,
@@ -77,9 +78,11 @@ export const ForecastCard = ({
               })}
             </div>
 
-            <img
-              src={`http://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+            <Image
+              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
               alt={day.weather[0].description}
+              width={50}
+              height={50}
               className="mx-auto"
             />
 

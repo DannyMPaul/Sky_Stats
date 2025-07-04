@@ -2,17 +2,20 @@
 import { useState, useEffect } from "react";
 import { WeatherCard } from "@/components/WeatherCard";
 import { ForecastCard } from "@/components/ForecastCard";
+import { LoadingSpinner } from "@/components/LoadingSpinner";
+import { Settings } from "@/components/Settings";
 import {
   getWeatherAndDetails,
-  WeatherData,
-  ForecastData,
   convertToFahrenheit,
   getSearchHistory,
   addToSearchHistory,
-  SearchHistoryItem,
 } from "@/utils/weather";
-import { FaSearch, FaHistory, FaTimes } from "react-icons/fa";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import {
+  WeatherData,
+  ForecastData,
+  SearchHistoryItem,
+} from "@/types/weather";
+import { FaSearch, FaHistory } from "react-icons/fa";
 
 export default function Home() {
   const [city, setCity] = useState("");
@@ -55,10 +58,24 @@ export default function Home() {
     }
   };
 
-  const handleHistoryClick = (item: SearchHistoryItem) => {
-    setCity(`${item.city}, ${item.country}`);
+  const handleHistoryClick = async (item: SearchHistoryItem) => {
+    const searchTerm = `${item.city}, ${item.country}`;
+    setCity(searchTerm);
     setShowHistory(false);
-    handleSearch(new Event("submit") as any);
+    setLoading(true);
+    setError("");
+
+    try {
+      const { weather: weatherData, forecast: forecastData } = await getWeatherAndDetails(searchTerm);
+      setWeather(weatherData);
+      setForecast(forecastData);
+      addToSearchHistory(item.city, item.country);
+    } catch (err) {
+      setError("Failed to fetch weather data. Please try again.");
+      console.error("Weather fetch error:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,22 +88,19 @@ export default function Home() {
     >
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Weather App</h1>
-          <button
-            onClick={() =>
-              setThemeMode((prev) => (prev === "light" ? "dark" : "light"))
-            }
-            className="p-2 rounded-full hover:bg-white/20 transition-colors"
-            aria-label={`Switch to ${
-              themeMode === "light" ? "dark" : "light"
-            } mode`}
-          >
-            {themeMode === "light" ? (
-              <MdDarkMode size={24} />
-            ) : (
-              <MdLightMode size={24} />
-            )}
-          </button>
+          <h1 className="text-4xl font-bold">Sky Stats</h1>
+          <div className="flex items-center gap-2">
+            <Settings
+              tempUnit={tempUnit}
+              themeMode={themeMode}
+              onTempUnitChange={() =>
+                setTempUnit((prev) => (prev === "C" ? "F" : "C"))
+              }
+              onThemeModeChange={() =>
+                setThemeMode((prev) => (prev === "light" ? "dark" : "light"))
+              }
+            />
+          </div>
         </div>
 
         <div className="relative">
@@ -113,7 +127,7 @@ export default function Home() {
               className="px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-md transition-colors"
               disabled={loading}
             >
-              {loading ? "Loading..." : <FaSearch />}
+              {loading ? <LoadingSpinner size="sm" /> : <FaSearch />}
             </button>
           </form>
 
@@ -143,6 +157,12 @@ export default function Home() {
             role="alert"
           >
             {error}
+          </div>
+        )}
+
+        {loading && !weather && (
+          <div className="flex items-center justify-center py-12">
+            <LoadingSpinner size="lg" />
           </div>
         )}
 
