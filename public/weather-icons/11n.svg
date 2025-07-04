@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Thunderstorm night -->
+  <ellipse cx="32" cy="25" rx="22" ry="13" fill="#000" stroke="#1a1a1a" stroke-width="1"/>
+  <ellipse cx="42" cy="22" rx="17" ry="9" fill="#000" stroke="#1a1a1a" stroke-width="1"/>
+  <ellipse cx="25" cy="30" rx="18" ry="8" fill="#000" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- Lightning bolt -->
+  <path d="M32 35L28 42L34 42L30 50L38 40L32 40L36 35Z" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  <!-- Rain drops -->
+  <line x1="20" y1="40" x2="18" y2="48" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="40" x2="42" y2="48" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+</svg>

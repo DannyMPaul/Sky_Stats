@@ -113,6 +113,10 @@ export const WeatherCard = ({
                   height={128}
                   className="w-32 h-32"
                   priority
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.src = '/default-weather.svg';
+                  }}
                 />
                 <div className="text-4xl font-bold mb-4 flex items-center gap-2">
                   <span>

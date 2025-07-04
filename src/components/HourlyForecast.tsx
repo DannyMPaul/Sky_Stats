@@ -50,6 +50,10 @@ export const HourlyForecast = ({
                 width={40}
                 height={40}
                 className="w-10 h-10"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  target.src = '/default-weather.svg';
+                }}
               />
             </div>
             <div className="text-lg font-bold mb-1">

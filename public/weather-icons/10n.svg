@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rain night -->
+  <path d="M22 8C18 10 16 14 16 18C16 24 20 29 26 29C30 29 33 27 35 24C33 26 30 27 26 27C20 27 16 23 16 17C16 14 17 12 19 10C20 9 21 8 22 8Z" fill="#C4C4C4"/>
+  <!-- Cloud -->
+  <ellipse cx="40" cy="30" rx="18" ry="11" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <ellipse cx="47" cy="27" rx="14" ry="8" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <ellipse cx="35" cy="35" rx="15" ry="7" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <!-- Rain drops -->
+  <line x1="28" y1="42" x2="26" y2="52" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="36" y1="44" x2="34" y2="54" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="42" x2="42" y2="52" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="52" y1="44" x2="50" y2="54" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+</svg>

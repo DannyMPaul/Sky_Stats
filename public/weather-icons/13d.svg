@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Snow -->
+  <ellipse cx="32" cy="25" rx="20" ry="12" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="1"/>
+  <ellipse cx="40" cy="22" rx="15" ry="8" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="1"/>
+  <ellipse cx="25" cy="30" rx="16" ry="7" fill="#D3D3D3" stroke="#A9A9A9" stroke-width="1"/>
+  <!-- Snowflakes -->
+  <g stroke="white" stroke-width="2" stroke-linecap="round">
+    <line x1="20" y1="38" x2="20" y2="48"/>
+    <line x1="15" y1="43" x2="25" y2="43"/>
+    <line x1="17" y1="40" x2="23" y2="46"/>
+    <line x1="23" y1="40" x2="17" y2="46"/>
+  </g>
+  <g stroke="white" stroke-width="2" stroke-linecap="round">
+    <line x1="35" y1="40" x2="35" y2="50"/>
+    <line x1="30" y1="45" x2="40" y2="45"/>
+    <line x1="32" y1="42" x2="38" y2="48"/>
+    <line x1="38" y1="42" x2="32" y2="48"/>
+  </g>
+  <g stroke="white" stroke-width="2" stroke-linecap="round">
+    <line x1="45" y1="38" x2="45" y2="48"/>
+    <line x1="40" y1="43" x2="50" y2="43"/>
+    <line x1="42" y1="40" x2="48" y2="46"/>
+    <line x1="48" y1="40" x2="42" y2="46"/>
+  </g>
+</svg>

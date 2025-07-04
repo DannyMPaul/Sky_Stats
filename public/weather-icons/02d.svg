@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Few clouds day -->
+  <circle cx="24" cy="24" r="12" fill="#FFD700"/>
+  <path d="M24 6L24 12M24 36L24 42M42 24L36 24M12 24L6 24M37.1 10.9L32.5 15.5M15.5 32.5L10.9 37.1M37.1 37.1L32.5 32.5M15.5 15.5L10.9 10.9" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cloud -->
+  <ellipse cx="45" cy="40" rx="15" ry="9" fill="white" stroke="#87CEEB" stroke-width="1"/>
+  <ellipse cx="52" cy="38" rx="12" ry="7" fill="white" stroke="#87CEEB" stroke-width="1"/>
+  <ellipse cx="40" cy="45" rx="13" ry="6" fill="white" stroke="#87CEEB" stroke-width="1"/>
+</svg>

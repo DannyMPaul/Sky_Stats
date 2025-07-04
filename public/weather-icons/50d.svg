@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mist/fog -->
+  <g stroke="#B0C4DE" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="10" y1="20" x2="54" y2="20"/>
+    <line x1="8" y1="28" x2="52" y2="28"/>
+    <line x1="12" y1="36" x2="56" y2="36"/>
+    <line x1="6" y1="44" x2="50" y2="44"/>
+    <line x1="14" y1="52" x2="58" y2="52"/>
+  </g>
+  <g stroke="#87CEEB" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="16" y1="24" x2="48" y2="24"/>
+    <line x1="10" y1="32" x2="46" y2="32"/>
+    <line x1="18" y1="40" x2="54" y2="40"/>
+    <line x1="12" y1="48" x2="44" y2="48"/>
+  </g>
+</svg>

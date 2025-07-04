@@ -84,6 +84,10 @@ export const ForecastCard = ({
               width={50}
               height={50}
               className="mx-auto"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.src = '/default-weather.svg';
+              }}
             />
 
             <div

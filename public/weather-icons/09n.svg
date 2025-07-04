@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shower rain night -->
+  <ellipse cx="32" cy="25" rx="20" ry="12" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <ellipse cx="40" cy="22" rx="15" ry="8" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <ellipse cx="25" cy="30" rx="16" ry="7" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+  <!-- Rain drops -->
+  <line x1="20" y1="38" x2="18" y2="48" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="40" x2="26" y2="50" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="36" y1="38" x2="34" y2="48" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="44" y1="40" x2="42" y2="50" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="45" x2="22" y2="55" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="45" x2="38" y2="55" stroke="#6495ED" stroke-width="2" stroke-linecap="round"/>
+</svg>
