@@ -3,14 +3,6 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install",
-  "env": {
-    "WEATHER_API_KEY": "@weather-api-key"
-  },
-  "build": {
-    "env": {
-      "WEATHER_API_KEY": "@weather-api-key"
-    }
-  },
   "functions": {
     "src/app/**/*.tsx": {
       "maxDuration": 30
