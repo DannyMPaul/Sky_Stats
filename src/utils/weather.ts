@@ -41,15 +41,12 @@ export const addToSearchHistory = (city: string, country: string) => {
 };
 
 export const getCoordinates = async (city: string) => {
-  if (!process.env.NEXT_PUBLIC_WEATHER_API_KEY)
-    throw new Error("Weather API key is not configured");
-
   try {
-    const { data } = await axios.get(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`
-    );
-
-    if (!data.length) throw new Error("Location not found");
+    const { data } = await axios.get(`/api/weather?endpoint=geocoding&city=${encodeURIComponent(city)}`);
+    
+    if (!data.length) {
+      throw new Error("Location not found");
+    }
 
     return {
       lat: data[0].lat,
@@ -59,42 +56,38 @@ export const getCoordinates = async (city: string) => {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 401) throw new Error("Invalid API key");
       if (error.response?.status === 404) throw new Error("Location not found");
+      if (error.response?.status === 429) throw new Error("Too many requests. Please try again later.");
+      if (error.response?.status === 403) throw new Error("Access denied");
     }
     throw new Error("Failed to fetch location data");
   }
 };
 
 export const getWeather = async (city: string): Promise<WeatherData> => {
-  if (!process.env.NEXT_PUBLIC_WEATHER_API_KEY)
-    throw new Error("Weather API key is not configured");
-
   try {
-    const { data } = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`
-    );
+    const { data } = await axios.get(`/api/weather?endpoint=weather&city=${encodeURIComponent(city)}`);
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 401) throw new Error("Invalid API key");
       if (error.response?.status === 404) throw new Error("Location not found");
+      if (error.response?.status === 429) throw new Error("Too many requests. Please try again later.");
+      if (error.response?.status === 403) throw new Error("Access denied");
     }
     throw new Error("Failed to fetch weather data");
   }
 };
 
 export const getForecast = async (city: string): Promise<ForecastData> => {
-  if (!process.env.NEXT_PUBLIC_WEATHER_API_KEY)
-    throw new Error("Weather API key is not configured");
-
   try {
-    const { data } = await axios.get(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`
-    );
+    const { data } = await axios.get(`/api/weather?endpoint=forecast&city=${encodeURIComponent(city)}`);
     return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.response?.status === 401) throw new Error("Invalid API key");
       if (error.response?.status === 404) throw new Error("Location not found");
+      if (error.response?.status === 429) throw new Error("Too many requests. Please try again later.");
+      if (error.response?.status === 403) throw new Error("Access denied");
     }
     throw new Error("Failed to fetch forecast data");
   }

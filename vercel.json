@@ -4,11 +4,11 @@
   "framework": "nextjs",
   "installCommand": "npm install",
   "env": {
-    "NEXT_PUBLIC_WEATHER_API_KEY": "@weather-api-key"
+    "WEATHER_API_KEY": "@weather-api-key"
   },
   "build": {
     "env": {
-      "NEXT_PUBLIC_WEATHER_API_KEY": "@weather-api-key"
+      "WEATHER_API_KEY": "@weather-api-key"
     }
   },
   "functions": {
