@@ -34,9 +34,11 @@ export const TempChart = ({
   const isDark = themeMode === "dark";
 
   return (
-    <div className={`w-full h-64 p-4 rounded-lg ${
-      isDark ? "bg-gray-800" : "bg-white/10"
-    } backdrop-blur-md`}>
+    <div
+      className={`w-full h-64 p-4 rounded-lg ${
+        isDark ? "bg-gray-800" : "bg-white/10"
+      } backdrop-blur-md`}
+    >
       <h3 className="text-lg font-semibold mb-4 text-center">
         24-Hour Temperature Trend
       </h3>
@@ -58,7 +60,10 @@ export const TempChart = ({
               value: `Temperature (°${tempUnit})`,
               angle: -90,
               position: "insideLeft",
-              style: { textAnchor: "middle", fill: isDark ? "#d1d5db" : "#ffffff" },
+              style: {
+                textAnchor: "middle",
+                fill: isDark ? "#d1d5db" : "#ffffff",
+              },
             }}
           />
           <Tooltip

@@ -79,7 +79,7 @@ export const ForecastCard = ({
             </div>
 
             <Image
-              src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+              src={`/weather-icons/${day.weather[0].icon}.svg`}
               alt={day.weather[0].description}
               width={50}
               height={50}

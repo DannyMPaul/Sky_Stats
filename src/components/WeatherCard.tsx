@@ -107,11 +107,12 @@ export const WeatherCard = ({
               </div>
               <div className="flex flex-col items-center">
                 <Image
-                  src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`}
+                  src={`/weather-icons/${weatherData.weather[0].icon}.svg`}
                   alt={weatherData.weather[0].description}
                   width={128}
                   height={128}
                   className="w-32 h-32"
+                  priority
                 />
                 <div className="text-4xl font-bold mb-4 flex items-center gap-2">
                   <span>

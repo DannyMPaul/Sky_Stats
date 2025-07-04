@@ -96,7 +96,13 @@ export const Settings = ({
                               : "bg-gray-100 hover:bg-gray-200"
                           }`}
                         >
-                          {opt === "C" ? "Celsius" : opt === "F" ? "Fahrenheit" : opt === "light" ? "Light" : "Dark"}
+                          {opt === "C"
+                            ? "Celsius"
+                            : opt === "F"
+                            ? "Fahrenheit"
+                            : opt === "light"
+                            ? "Light"
+                            : "Dark"}
                         </button>
                       ))}
                     </div>

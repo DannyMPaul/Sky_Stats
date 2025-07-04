@@ -10,11 +10,7 @@ import {
   getSearchHistory,
   addToSearchHistory,
 } from "@/utils/weather";
-import {
-  WeatherData,
-  ForecastData,
-  SearchHistoryItem,
-} from "@/types/weather";
+import { WeatherData, ForecastData, SearchHistoryItem } from "@/types/weather";
 import { FaSearch, FaHistory } from "react-icons/fa";
 
 export default function Home() {
@@ -66,7 +62,8 @@ export default function Home() {
     setError("");
 
     try {
-      const { weather: weatherData, forecast: forecastData } = await getWeatherAndDetails(searchTerm);
+      const { weather: weatherData, forecast: forecastData } =
+        await getWeatherAndDetails(searchTerm);
       setWeather(weatherData);
       setForecast(forecastData);
       addToSearchHistory(item.city, item.country);

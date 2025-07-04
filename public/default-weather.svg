@@ -1,0 +1,16 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <circle cx="64" cy="64" r="60" fill="#87CEEB" stroke="#4682B4" stroke-width="3"/>
+  
+  <!-- Sun -->
+  <circle cx="45" cy="45" r="18" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+  <path d="M45 20L45 15M45 75L45 70M70 45L75 45M15 45L20 45M62.1 27.9L65.2 24.8M24.8 65.2L27.9 62.1M62.1 62.1L65.2 65.2M24.8 24.8L27.9 27.9" stroke="#FFA500" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Cloud -->
+  <ellipse cx="75" cy="60" rx="20" ry="12" fill="white" opacity="0.9"/>
+  <ellipse cx="85" cy="58" rx="15" ry="10" fill="white" opacity="0.9"/>
+  <ellipse cx="70" cy="65" rx="18" ry="8" fill="white" opacity="0.9"/>
+  
+  <!-- Weather text -->
+  <text x="64" y="100" text-anchor="middle" fill="#4682B4" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Weather</text>
+</svg>

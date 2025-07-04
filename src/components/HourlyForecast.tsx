@@ -18,9 +18,11 @@ export const HourlyForecast = ({
   const hourlyData = forecast.list.slice(0, 8);
 
   return (
-    <div className={`w-full p-4 rounded-lg ${
-      themeMode === "dark" ? "bg-gray-800" : "bg-white/10"
-    } backdrop-blur-md`}>
+    <div
+      className={`w-full p-4 rounded-lg ${
+        themeMode === "dark" ? "bg-gray-800" : "bg-white/10"
+      } backdrop-blur-md`}
+    >
       <h3 className="text-lg font-semibold mb-4 text-center">
         Hourly Forecast
       </h3>
@@ -43,7 +45,7 @@ export const HourlyForecast = ({
             </div>
             <div className="flex justify-center mb-2">
               <Image
-                src={`https://openweathermap.org/img/wn/${hour.weather[0].icon}.png`}
+                src={`/weather-icons/${hour.weather[0].icon}.svg`}
                 alt={hour.weather[0].description}
                 width={40}
                 height={40}
